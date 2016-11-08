@@ -1,0 +1,128 @@
+<div class="portlet box blue">
+            <div class="portlet-title">
+              <div class="caption">
+              Carlines (New Form)
+              </div>
+            </div>
+            <div class="portlet-body form">
+              
+<%= form_for @carline, :html => {:class => "form-horizontal" } do |f| %>
+
+
+
+    <div class="form-group">
+            <label class="col-md-2 control-label"> <h2>Carline </h2></label>
+            <div class="col-md-9">
+          
+    </div>
+    </div>
+
+  <% if @carline.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@carline.errors.count, "error") %> prohibited this delivery from being saved:</h2>
+
+      <ul>
+      <% @carline.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+    <div class="form-body">
+ <div class="form-group">
+            <label class="col-md-2 control-label">Name</label>
+            <div class="col-md-9">
+    <%= f.text_field :name,  :class =>"form-control", :value => @carline_info.name %>
+     </div>
+        </div>
+ <div class="form-group">
+            <label class="col-md-2 control-label">Phone</label>
+            <div class="col-md-9">
+    <%= f.text_field :phone,  :class =>"form-control", :value => @carline_info.phone  %>
+     </div>
+        </div>
+ <div class="form-group">
+            <label class="col-md-2 control-label">Address</label>
+            <div class="col-md-9">
+    <%= f.text_field :address,  :class =>"form-control", :value => @carline_info.address %>
+      </div>
+        </div>
+
+
+    <div class="form-group">
+            <label class="col-md-2 control-label">Website</label>
+            <div class="col-md-9">
+    <%= f.text_field :website,  :class =>"form-control",:value => @carline_info.website %>
+    </div>
+    </div>
+
+    <div class="form-group">
+            <label class="col-md-2 control-label">Email</label>
+            <div class="col-md-9">
+    <%= f.text_field :email,  :class =>"form-control",:value => @carline_info.email  %>
+    </div>
+    </div>
+
+    
+   
+
+    <div class="form-group">
+            <label class="col-md-2 control-label"> <h2>Routes </h2></label>
+            <div class="col-md-9">
+          
+    </div>
+    </div>
+
+    <div class="form-group">
+            <label class="col-md-2 control-label">Days</label>
+            <div class="col-md-9">
+           <%= f.text_field :days,  :class =>"form-control" %>
+    </div>
+    </div>
+
+    <div class="form-group">
+            <label class="col-md-2 control-label">From</label>
+            <div class="col-md-9">
+           <%= select("carline", "from", City.all.collect {|p| [ p.title, p.title ] }, {prompt: 'Select'}) %>
+          
+    </div>
+    </div>
+
+        <div class="form-group">
+            <label class="col-md-2 control-label">To</label>
+            <div class="col-md-9">
+            <%= select("carline", "to", City.all.collect {|p| [ p.title, p.title ] }, {prompt: 'Select'}) %>    </div>
+    </div>
+
+
+    <div class="form-group">
+            <label class="col-md-2 control-label">Departure</label>
+            <div class="col-md-9">
+           <%= f.text_field :departure_time,  :class =>"form-control" %>
+    </div>
+    </div>
+
+        <div class="form-group">
+            <label class="col-md-2 control-label">Arrival</label>
+            <div class="col-md-9">
+           <%= f.text_field :arrival_time,  :class =>"form-control" %>
+    </div>
+    </div>
+
+
+
+ 
+    <div class="row">
+          <div class="col-md-offset-3 col-md-9">
+            <%= f.submit "Add route", :class=>"btn blue" %>
+            <button type="button" class="btn default">Cancel</button>
+          </div>
+        </div>
+  
+  <br/>
+
+<% end %>
+            </div>
+</div>
+

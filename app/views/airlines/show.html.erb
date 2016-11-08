@@ -1,0 +1,42 @@
+<p id="notice"><%= notice %></p>
+
+
+
+ 
+ <h3><%= @airline.name %></h3>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @airline.phone %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @airline.address %>
+</p>
+
+ <h3>Routes</h3>
+<table class="table table-striped">
+  <tr>
+    <td><b>FL</b></td>
+    <td><b>From (Departure)</b></td> 
+    <td><b>To (Arrival)</b></td>
+    <td><b>Schedule </b></td>
+  </tr>
+  <% @airline_routes.each do |airline_route| %>
+
+
+    <tr>
+      <td><%= airline_route.flight_number %></td>
+      <td><%= airline_route.from %> <b><%= airline_route.departure_time %></b></td> 
+      <td><%= airline_route.to %> <b><%= airline_route.arrival_time %></b></td>
+      <td><%= airline_route.days %></td>
+    </tr>
+
+
+
+  <% end %>
+</table>
+
+
+<%= link_to 'Back', airlines_path %>

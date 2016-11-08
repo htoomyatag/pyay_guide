@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  username: MyString
+  rate_number: MyString
+  rate_name: MyString
+  rate_category: MyString
+
+two:
+  username: MyString
+  rate_number: MyString
+  rate_name: MyString
+  rate_category: MyString

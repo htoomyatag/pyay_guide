@@ -1,0 +1,49 @@
+
+
+<div class="portlet box blue">
+            <div class="portlet-title">
+              <div class="caption">
+              Ads listings
+              </div>
+            </div>
+
+            <div class="portlet-body form">
+                
+                <br/>
+                <p style="padding-left:20px;font-size:14px;">
+                Sticky Advertisements informations
+              </p>
+      <table class="table table-bordered" style="padding:30px;" >
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Image</th>
+      <th colspan="2"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @stickey_advertisements.each do |stickey_advertisement| %>
+       <tr class="tablerow">
+         <td><input id="aok"></td>
+        <td><%= image_tag stickey_advertisement.avatar1.url(:thumb) %></td>
+        <td><%= link_to 'Edit', edit_stickey_advertisement_path(stickey_advertisement) %></td>
+        <td><%= link_to 'Destroy', stickey_advertisement, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+            </div>
+</div>
+
+<script type="text/javascript">
+      window.onload = function () {
+
+       $('.tablerow').each(function (i) {
+              $("td:first", this).html(i + 1);
+         });
+
+     };
+
+</script>

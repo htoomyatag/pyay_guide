@@ -1,0 +1,61 @@
+
+
+<div class="portlet box blue">
+            <div class="portlet-title">
+              <div class="caption">
+              Informations listings
+              </div>
+            </div>
+
+            <div class="portlet-body form">
+                
+                <br/>
+                <p style="padding-left:20px;font-size:14px;">
+          			<%= params[:category] %> informations
+          		</p>
+          <table class="table table-bordered" style="padding:30px;" >
+            <thead>
+			    <tr>
+			      <th>ID</th>
+			      <th>Name</th>
+			      <th>Address</th>
+			      <th>Phone</th>
+			      <th>Website</th>
+			      <th>Latitude</th>
+			      <th>Longitude</th>
+			      <th></th>
+			      <th colspan="2"></th>
+			    </tr>
+			  </thead>
+
+              <tbody>
+			    <% @simple_tables.each do |simple_table| %>
+			       <tr class="tablerow">
+                    <td><input id="aok"></td>
+			        <td><%= simple_table.name %></td>
+			        <td><%= simple_table.address %></td>
+			        <td><%= simple_table.phone %></td>
+			        <td><%= simple_table.website %></td>
+			        <td><%= simple_table.latitude %></td>
+			        <td><%= simple_table.longitude %></td>
+			        <td><%= image_tag simple_table.avatar1.url(:thumb) %></td>
+			        <td><%= link_to 'Edit', edit_simple_table_path(simple_table) %></td>
+			        <td><%= link_to 'Destroy', simple_table, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+			      </tr>
+			    <% end %>
+			  </tbody>
+          </table>
+
+            </div>
+</div>
+
+<script type="text/javascript">
+      window.onload = function () {
+
+       $('.tablerow').each(function (i) {
+              $("td:first", this).html(i + 1);
+         });
+
+     };
+
+</script>

@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+
+
+ 
+ <h3><%= @train.name %></h3>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @train.phone %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @train.address %>
+</p>
+
+ <h3>Routes</h3>
+<table class="table table-striped">
+  <tr>
+    <td><b>Remark</b></td> 
+    <td><b>From (Departure)</b></td> 
+    <td><b>To (Arrival)</b></td>
+
+  </tr>
+   <% @train_routes.each do |train_route| %>
+  <tr>
+    <td><%= train_route.remark %></td>
+    <td><%= train_route.from %> <b><%= train_route.departure_time %></b></td> 
+    <td><%= train_route.to %> <b><%= train_route.arrival_time %></b></td>
+
+  </tr>
+  <% end %>
+</table>
+
+
+<%= link_to 'Back', trains_path %>

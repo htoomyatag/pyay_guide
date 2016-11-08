@@ -1,0 +1,60 @@
+<div class="portlet box blue">
+            <div class="portlet-title">
+              <div class="caption">
+              Souvenir listings
+              </div>
+            </div>
+
+            <div class="portlet-body form">
+                
+                <br/>
+                <p style="padding-left:20px;">
+                  <%= link_to 'New Souvenir', new_souvenir_path, :class => "btn btn-default" %>
+                </p>
+          <table class="table table-bordered" style="padding:30px;" >
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Phone</th>
+      <th>Address</th>
+      <th>Category</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @souvenirs.each do |souvenir| %>
+      <tr class="tablerow">
+                  <td><input id="aok"></td>
+        <td><%= souvenir.name %></td>
+        <td><%= souvenir.phone %></td>
+        <td><%= souvenir.address %></td>
+        <td><%= souvenir.category %></td>
+        <td><%= link_to 'Show', souvenir %></td>
+        <td><%= link_to 'Edit', edit_souvenir_path(souvenir) %></td>
+        <td><%= link_to 'Destroy', souvenir, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+            <div class="container">
+              <%= will_paginate @souvenirs %>
+            </div>
+
+          </div>
+</div>
+
+
+
+
+
+<script type="text/javascript">
+      window.onload = function () {
+
+       $('.tablerow').each(function (i) {
+              $("td:first", this).html(i + 1);
+         });
+
+     };
+
+</script>

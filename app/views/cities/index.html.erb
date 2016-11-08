@@ -1,0 +1,61 @@
+
+
+
+
+<div class="portlet box blue">
+            <div class="portlet-title">
+              <div class="caption">
+              City listings
+              </div>
+            </div>
+
+            <div class="portlet-body form">
+                
+                <br/>
+                <p style="padding-left:20px;">
+
+<%= link_to 'New City', new_city_path, :class => "btn btn-default" %>
+
+          </p>
+          <table class="table table-bordered" style="padding:30px;" >
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Title</th>
+                <th colspan="3"></th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <% @cities.each do |city| %>
+                <tr class="tablerow">
+                  <td><input id="aok"></td>
+                  <td><%= city.title %></td>
+                  <td><%= link_to 'Show', city %></td>
+                  <td><%= link_to 'Edit', edit_city_path(city) %></td>
+                  <td><%= link_to 'Destroy', city, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                </tr>
+              <% end %>
+            </tbody>
+          </table>
+
+            <div class="container">
+              <%= will_paginate @cities %>
+            </div>
+      </div>
+</div>
+
+
+
+
+
+<script type="text/javascript">
+      window.onload = function () {
+
+       $('.tablerow').each(function (i) {
+              $("td:first", this).html(i + 1);
+         });
+
+     };
+
+</script>

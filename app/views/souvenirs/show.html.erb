@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @souvenir.name %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @souvenir.phone %>
+</p>
+
+<p>
+  <strong>Region:</strong>
+  <%= @souvenir.region %>
+</p>
+
+<p>
+  <strong>Township:</strong>
+  <%= @souvenir.township %>
+</p>
+
+<p>
+  <strong>Souvenir type:</strong>
+  <%= @souvenir.category %>
+</p>
+
+<%= link_to 'Edit', edit_souvenir_path(@souvenir) %> |
+<%= link_to 'Back', souvenirs_path %>

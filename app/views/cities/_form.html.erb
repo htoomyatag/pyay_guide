@@ -1,0 +1,42 @@
+<%= form_for @city, :html => {:class => "form-horizontal" } do |f| %>
+
+
+
+  <% if @city.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@city.errors.count, "error") %> prohibited this city from being saved:</h2>
+
+      <ul>
+      <% @city.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+
+    <div class="form-body">
+       <div class="form-group">
+          <label class="col-md-3 control-label">City</label>
+          <div class="col-md-9">
+            <%= f.text_field :title,  :class =>"form-control" %>
+          </div>
+        </div>
+
+    </div>
+
+
+    <div class="row">
+          <div class="col-md-offset-3 col-md-9">
+            <%= f.submit :class=>"btn blue" %>
+            <button type="button" class="btn default">Cancel</button>
+          </div>
+    </div>
+
+
+  
+  <br/>
+
+
+<% end %>

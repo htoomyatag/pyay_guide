@@ -1,0 +1,72 @@
+
+<!--  -->
+
+
+
+
+
+<div class="portlet box blue">
+            <div class="portlet-title">
+              <div class="caption">
+              Information listings
+              </div>
+            </div>
+
+            <div class="portlet-body form">
+                 <br/>
+                <p style="padding-left:20px;font-size:14px;">
+               Buses informations
+              </p>
+              
+   <table class="table table-bordered" style="padding:30px;" >
+  <thead>
+    <tr>
+      <th> ID</th>
+      <th>Name</th>
+      <th>Address</th>
+      <th>Phone</th>
+      <th>Website</th>
+      <th>Latitude</th>
+      <th>Longitude</th>
+      <th>Fromtownship</th>
+      <th>Totownship</th>
+      <th>Departuretime</th>
+      <th></th>
+      <th colspan="2"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @buses.each do |bus| %>
+       <tr class="tablerow">
+        <td><input id="aok"></td>
+        <td><%= bus.name %></td>
+        <td><%= bus.address %></td>
+        <td><%= bus.phone %></td>
+        <td><%= bus.website %></td>
+        <td><%= bus.latitude %></td>
+        <td><%= bus.longitude %></td>
+        <td><%= bus.fromtownship %></td>
+        <td><%= bus.totownship %></td>
+        <td><%= bus.departuretime %></td>
+        <td><%= image_tag bus.avatar1.url(:thumb) %></td>
+        <td><%= link_to 'Edit', edit_bus_path(bus) %></td>
+        <td><%= link_to 'Destroy', bus, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+            </div>
+</div>
+
+<script type="text/javascript">
+      window.onload = function () {
+
+       $('.tablerow').each(function (i) {
+              $("td:first", this).html(i + 1);
+         });
+
+     };
+
+</script>

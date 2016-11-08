@@ -1,0 +1,57 @@
+
+<div class="portlet box blue">
+            <div class="portlet-title">
+              <div class="caption">
+              voyages listings
+              </div>
+            </div>
+
+            <div class="portlet-body form">
+                
+                <br/>
+                <p style="padding-left:20px;">
+          <%= link_to 'New voyage', new_voyage_path, :class => "btn btn-default" %></p>
+          <table class="table table-bordered" style="padding:30px;">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Phone</th>
+                <th>Address</th>
+                <th colspan="4"></th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <% @voyages.each do |voyage| %>
+                  <tr class="tablerow">
+                  <td><input id="aok"></td>
+                  <td><%= voyage.name %></td>
+                  <td><%= voyage.phone %></td>
+                  <td><%= voyage.address %></td>
+                  <td><%= link_to 'Add', voyage_route_path(:id => voyage) %></td>
+                  <td><%= link_to 'Show', voyage %></td>
+                  <td><%= link_to 'Edit', edit_voyage_path(voyage) %></td>
+                  <td><%= link_to 'Destroy', voyage, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                </tr>
+              <% end %>
+            </tbody>
+          </table>
+
+            </div>
+</div>
+
+
+
+
+
+<script type="text/javascript">
+      window.onload = function () {
+
+       $('.tablerow').each(function (i) {
+              $("td:first", this).html(i + 1);
+         });
+
+     };
+
+</script>

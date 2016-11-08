@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @bus.name %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @bus.address %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @bus.phone %>
+</p>
+
+<p>
+  <strong>Website:</strong>
+  <%= @bus.website %>
+</p>
+
+<p>
+  <strong>Latitude:</strong>
+  <%= @bus.latitude %>
+</p>
+
+<p>
+  <strong>Longitude:</strong>
+  <%= @bus.longitude %>
+</p>
+
+<p>
+  <strong>Fromtownship:</strong>
+  <%= @bus.fromtownship %>
+</p>
+
+<p>
+  <strong>Totownship:</strong>
+  <%= @bus.totownship %>
+</p>
+
+<p>
+  <strong>Departuretime:</strong>
+  <%= @bus.departuretime %>
+</p>
+
+<%= link_to 'Edit', edit_bus_path(@bus) %> |
+<%= link_to 'Back', buses_path %>

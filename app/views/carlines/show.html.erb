@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+
+
+ 
+ <h3><%= @carline.name %></h3>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @carline.phone %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @carline.address %>
+</p>
+
+ <h3>Routes</h3>
+<table class="table table-striped">
+  <tr>
+    <td><b>From (Departure)</b></td> 
+    <td><b>To (Arrival)</b></td>
+    <td><b>Schedule </b></td>
+  </tr>
+   <% @carline_routes.each do |carline_route| %>
+
+          <tr>
+            <td><%= carline_route.from %> <b><%= carline_route.departure_time %></b></td> 
+            <td><%= carline_route.to %> <b><%= carline_route.arrival_time %></b></td>
+            <td><%= carline_route.days %></td>
+          </tr>
+
+  <% end %>
+</table>
+
+
+<%= link_to 'Back', carlines_path %>

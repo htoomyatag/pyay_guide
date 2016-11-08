@@ -1,0 +1,38 @@
+
+
+<div class="portlet box blue">
+            <div class="portlet-title">
+              <div class="caption">
+              User listings
+              </div>
+            </div>
+
+            <div class="portlet-body form">
+                
+                <br/>
+                <p style="padding-left:20px;">
+          <%= link_to 'New Admin', new_admin_path, :class => "btn btn-default" %></p>
+          <table class="table table-bordered" style="padding:30px;">
+            <thead>
+              <tr>
+                <th>UserName</th>
+                <th>Email</th>
+                <th colspan="2"></th>
+              </tr>
+            </thead>
+
+             <tbody>
+                <% @admins.each do |admin| %>
+                  <tr>
+                    <td><%= admin.username %></td>
+                    <td><%= admin.email %></td>
+                   
+                    <td><%= link_to 'Destroy', admin, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                  </tr>
+                <% end %>
+              </tbody>
+          </table>
+
+            </div>
+</div>
+

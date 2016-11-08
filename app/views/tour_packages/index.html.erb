@@ -1,0 +1,60 @@
+<div class="portlet box blue">
+            <div class="portlet-title">
+              <div class="caption">
+              Tour package listings
+              </div>
+            </div>
+
+            <div class="portlet-body form">
+                
+                <br/>
+                <p style="padding-left:20px;">
+
+                  <%= link_to 'New Tour package', new_tour_package_path, :class => "btn btn-default" %>
+                </p>
+          <table class="table table-bordered" style="padding:30px;" >
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Package name</th>
+                <th>Price</th>
+                <th>Detail</th>
+                <th>Duration</th>
+                <th colspan="3"></th>
+              </tr>
+            </thead>
+              <tbody>
+              <% @tour_packages.each do |tour_package| %>
+                  <tr class="tablerow">
+                  <td><input id="aok"></td>
+                    <td><%= tour_package.package_name %></td>
+                    <td><%= tour_package.price %></td>
+                    <td><%= tour_package.detail %></td>
+                    <td><%= tour_package.duration %></td>
+                    <td><%= link_to 'Show', tour_package %></td>
+                    <td><%= link_to 'Edit', edit_tour_package_path(tour_package) %></td>
+                    <td><%= link_to 'Destroy', tour_package, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                </tr>
+              <% end %>
+            </tbody>
+          </table>
+
+            <div class="container">
+              <%= will_paginate @tour_packages %>
+            </div>
+      </div>
+</div>
+
+
+
+
+<script type="text/javascript">
+      window.onload = function () {
+
+ $('#tablerow').each(function (i) {
+              $("td:first", this).html(i + 1);
+         });
+
+     };
+
+</script>
