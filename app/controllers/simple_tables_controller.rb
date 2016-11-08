@@ -4,7 +4,9 @@ class SimpleTablesController < ApplicationController
   # GET /simple_tables
   # GET /simple_tables.json
 
+  def api_informations
 
+  end
 
   def my_simple_tables
     @simple_tables = SimpleTable.all

@@ -78,6 +78,7 @@ end
   resources :admins
   get 'dashboard' => 'admins#dashboard'
   get 'informations' => 'simple_tables#informations'
+  get 'api_informations' => 'simple_tables#api_informations'
 
 
   resources :travel_posts
@@ -140,7 +141,6 @@ end
   match "my_electronic_ads" => "advertisements#my_electronic_ads", as: :my_electronic_ads, via: [:get, :post]
   match "my_tea_shop_ads" => "advertisements#my_tea_shop_ads", as: :my_tea_shop_ads, via: [:get, :post]
   match "my_cycle_ads" => "advertisements#my_cycle_ads", as: :my_cycle_ads, via: [:get, :post]
-
   match "my_restaurant_ads" => "advertisements#my_restaurant_ads", as: :my_restaurant_ads, via: [:get, :post]
   match "my_bus_gate_ads" => "advertisements#my_bus_gate_ads", as: :my_bus_gate_ads, via: [:get, :post]
   match "my_stickey_advertisement" => "stickey_advertisements#my_stickey_advertisement", as: :my_stickey_advertisement, via: [:get, :post]

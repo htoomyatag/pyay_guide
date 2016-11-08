@@ -1,0 +1,89 @@
+  <h3> Advertisements listing</h3>
+
+  <br/> "my_hotel_ads" => "advertisements#my_hotel_ads", as: :my_hotel_ads, via: [:get, :post]
+  <br/> "my_bank_ads" => "advertisements#my_bank_ads", as: :my_bank_ads, via: [:get, :post]
+  <br/> "my_beauty_saloon_ads" => "advertisements#my_beauty_saloon_ads", as: :my_beauty_saloon_ads, via: [:get, :post]
+  <br/> "my_computer_ads" => "advertisements#my_computer_ads", as: :my_computer_ads, via: [:get, :post]
+  <br/> "my_shopping_mall_ads" => "advertisements#my_shopping_mall_ads", as: :my_shopping_mall_ads, via: [:get, :post]
+  <br/> "my_education_ads" => "advertisements#my_education_ads", as: :my_education_ads, via: [:get, :post]
+  <br/> "my_hospital_ads" => "advertisements#my_hospital_ads", as: :my_hospital_ads, via: [:get, :post]
+  <br/> "my_store_ads" => "advertisements#my_store_ads", as: :my_store_ads, via: [:get, :post]
+  <br/> "my_famous_place_ads" => "advertisements#my_famous_place_ads", as: :my_famous_place_ads, via: [:get, :post]
+  <br/> "my_gas_station_ads" => "advertisements#my_gas_station_ads", as: :my_gas_station_ads, via: [:get, :post]
+  <br/> "my_jewellery_ads" => "advertisements#my_jewellery_ads", as: :my_jewellery_ads, via: [:get, :post]
+  <br/> "my_emergency_contact_ads" => "advertisements#my_emergency_contact_ads", as: :my_emergency_contact_ads, via: [:get, :post]
+  <br/> "my_farmer_ads" => "advertisements#my_farmer_ads", as: :my_farmer_ads, via: [:get, :post]
+  <br/> "my_electronic_ads" => "advertisements#my_electronic_ads", as: :my_electronic_ads, via: [:get, :post]
+  <br/> "my_tea_shop_ads" => "advertisements#my_tea_shop_ads", as: :my_tea_shop_ads, via: [:get, :post]
+  <br/> "my_cycle_ads" => "advertisements#my_cycle_ads", as: :my_cycle_ads, via: [:get, :post]
+  <br/> "my_restaurant_ads" => "advertisements#my_restaurant_ads", as: :my_restaurant_ads, via: [:get, :post]
+  <br/> "my_bus_gate_ads" => "advertisements#my_bus_gate_ads", as: :my_bus_gate_ads, via: [:get, :post]
+  <br/> "my_stickey_advertisement" => "stickey_advertisements#my_stickey_advertisement", as: :my_stickey_advertisement, via: [:get, :post]
+  <br/> "my_main_ads" => "advertisements#my_main_ads", as: :my_main_ads, via: [:get, :post]
+  
+
+
+    <h3> 18 Category listing</h3>
+
+
+
+  <br/> "my_bank" => "simple_tables#my_bank", as: :my_bank, via: [:get, :post]
+  <br/> "my_beauty_saloon" => "simple_tables#my_beauty_saloon", as: :my_beauty_saloon, via: [:get, :post]
+  <br/> "my_computer" => "simple_tables#my_computer", as: :my_computer, via: [:get, :post]
+  <br/> "my_shopping_mall" => "simple_tables#my_shopping_mall", as: :my_shopping_mall, via: [:get, :post]
+  <br/> "my_education" => "simple_tables#my_education", as: :my_education, via: [:get, :post]
+  <br/> "my_hospital" => "simple_tables#my_hospital", as: :my_hospital, via: [:get, :post]
+  <br/> "my_store" => "simple_tables#my_store", as: :my_store, via: [:get, :post]
+  <br/> "my_gas_station" => "simple_tables#my_gas_station", as: :my_gas_station, via: [:get, :post]
+  <br/> "my_jewellery" => "simple_tables#my_jewellery", as: :my_jewellery, via: [:get, :post]
+  <br/> "my_emergency_contact" => "simple_tables#my_emergency_contact", as: :my_emergency_contact, via: [:get, :post]
+  <br/> "my_farmer" => "simple_tables#my_farmer", as: :my_farmer, via: [:get, :post]
+  <br/> "my_electronic" => "simple_tables#my_electronic", as: :my_electronic, via: [:get, :post]
+  <br/> "my_tea_shop" => "simple_tables#my_tea_shop", as: :my_tea_shop, via: [:get, :post]
+  <br/> "my_cycle" => "simple_tables#my_cycle", as: :my_cycle, via: [:get, :post]
+  <br/> "my_restaurant" => "simple_tables#my_restaurant", as: :my_restaurant, via: [:get, :post]
+  <br/> "my_famous_place" => "simple_tables#my_famous_place", as: :my_famous_place, via: [:get, :post]
+  <br/> "my_hotel" => "hotels#my_hotel", as: :my_hotel, via: [:get, :post]
+  <br/> "my_bus_gate" => "buses#my_bus_gate", as: :my_bus_gate, via: [:get, :post]
+
+
+  <h3> Sign up user</h3>
+
+    def user_new<br/>
+    @user = User.create(:email => params[:email],:password => params[:password],:password_confirmation => params[:password_confirmation])<br/>
+  end<br/>
+
+
+
+    <h3> To give Rating</h3>
+
+    def to_give_rate<br/>
+
+     @rating = Rating.new(:username => params[:username], :rate_number => params[:rate_number], :rate_name => params[:rate_name], :rate_category => params[:rate_category])<br/>
+     @rating.save
+<br/>
+  end<br/>
+
+
+
+  <h3> Rating listing</h3>
+
+ <br/> "my_hotel_rating" => "ratings#my_hotel_rating", as: :my_hotel_rating, via: [:get, :post]
+<br/> "my_bus_rating" => "ratings#my_bus_rating", as: :my_bus_rating, via: [:get, :post]
+<br/> "my_bank_rating" => "ratings#my_bank_rating", as: :my_bank_rating, via: [:get, :post]
+<br/> "my_beauty_saloon_rating" => "ratings#my_beauty_saloon_rating", as: :my_beauty_saloon_rating, via: [:get, :post]
+<br/> "my_computer_rating" => "ratings#my_computer_rating", as: :my_computer_rating, via: [:get, :post]
+<br/> "my_shopping_mall_rating" => "ratings#my_shopping_mall_rating", as: :my_shopping_mall_rating, via: [:get, :post]
+<br/> "my_education_rating" => "ratings#my_education_rating", as: :my_education_rating, via: [:get, :post]
+<br/> "my_hospital_rating" => "ratings#my_hospital_rating", as: :my_hospital_rating, via: [:get, :post]
+<br/> "my_store_rating" => "ratings#my_store_rating", as: :my_store_rating, via: [:get, :post]
+<br/> "my_famous_place_rating" => "ratings#my_famous_place_rating", as: :my_famous_place_rating, via: [:get, :post]
+<br/> "my_gas_station_rating" => "ratings#my_gas_station_rating", as: :my_gas_station_rating, via: [:get, :post]
+<br/> "my_jewellery_rating" => "ratings#my_jewellery_rating", as: :my_jewellery_rating, via: [:get, :post]
+<br/> "my_emergency_contact_rating" => "ratings#my_emergency_contact_rating", as: :my_emergency_contact_rating, via: [:get, :post]
+<br/> "my_farmer_rating" => "ratings#my_farmer_rating", as: :my_farmer_rating, via: [:get, :post]
+<br/> "my_electronic_rating" => "ratings#my_electronic_rating", as: :my_electronic_rating, via: [:get, :post]
+<br/> "my_tea_shop_rating" => "ratings#my_tea_shop_rating", as: :my_tea_shop_rating, via: [:get, :post]
+<br/> "my_cycle_rating" => "ratings#my_cycle_rating", as: :my_cycle_rating, via: [:get, :post]
+<br/> "my_restaurant_rating" => "ratings#my_restaurant_rating", as: :my_restaurant_rating, via: [:get, :post]
+  
