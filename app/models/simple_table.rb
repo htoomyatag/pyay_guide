@@ -27,7 +27,7 @@ class SimpleTable < ActiveRecord::Base
       end
 
 
-            def avatar_url2
+      def avatar_url2
             avatar2.url(:medium)
       end
 
@@ -42,7 +42,7 @@ class SimpleTable < ActiveRecord::Base
       end
 
 
-            def avatar_url5
+      def avatar_url5
             avatar5.url(:medium)
       end
       

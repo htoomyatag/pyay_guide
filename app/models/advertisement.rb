@@ -43,7 +43,7 @@ class Advertisement < ActiveRecord::Base
 
 
 
-      def avatar_url1
+      def avatar_url
             avatar1.url(:medium)
       end
 

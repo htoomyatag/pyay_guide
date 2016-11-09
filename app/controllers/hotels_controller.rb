@@ -13,7 +13,7 @@ class HotelsController < ApplicationController
     respond_to do |format|
           my_primary_json = { 
             :Advertisement => @bank_ads.to_json(:methods => [:avatar_url1]),
-            :Hotel => @hotels.to_json(:methods => [:avatar_url,:avatar_url1,:avatar_url2,:avatar_url3,:avatar_url4])   }
+            :Hotel => @hotels.to_json(:methods => [:avatar_url5,:avatar_url1,:avatar_url2,:avatar_url3,:avatar_url4])   }
           my_seconday_json = my_primary_json.to_json.gsub('\\', '')
           a = '"['
           b = ']"'
