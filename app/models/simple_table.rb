@@ -20,6 +20,10 @@ class SimpleTable < ActiveRecord::Base
       validates_attachment_content_type :avatar5, content_type: /\Aimage\/.*\z/
 
 
+     COMCATEGORY = ["ကြန္ပ်ဴတာ",
+"မိုဘိုင္း",
+"မိတၲဳ"]
+
 
 
       def avatar_url1
@@ -45,5 +49,7 @@ class SimpleTable < ActiveRecord::Base
       def avatar_url5
             avatar5.url(:medium)
       end
+
+      
       
 end

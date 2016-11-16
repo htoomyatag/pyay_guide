@@ -20,6 +20,8 @@ class Hotel < ActiveRecord::Base
       validates_attachment_content_type :avatar5, content_type: /\Aimage\/.*\z/
 
       
+            HOTELCATEGORY = ["ဟိုတယ္","တည္းခိုခန္း","မိုတယ္"]
+
       
       def avatar_url1
             avatar1.url(:medium)
@@ -44,4 +46,7 @@ class Hotel < ActiveRecord::Base
             def avatar_url5
             avatar5.url(:medium)
       end
+
+
+
 end

@@ -216,6 +216,7 @@ ActiveRecord::Schema.define(version: 20161108033413) do
     t.string   "description"
     t.string   "option_phone1"
     t.string   "option_phone2"
+    t.string   "computer_category"
     t.datetime "created_at",           null: false
     t.datetime "updated_at",           null: false
     t.string   "avatar1_file_name"

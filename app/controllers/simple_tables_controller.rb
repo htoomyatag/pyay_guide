@@ -388,6 +388,6 @@ class SimpleTablesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def simple_table_params
-      params.require(:simple_table).permit(:option_phone1, :option_phone2, :description, :avatar1, :avatar2, :avatar3, :avatar4, :avatar5, :name, :address, :phone, :website, :latitude, :longitude, :category_id)
+      params.require(:simple_table).permit(:option_phone1, :option_phone2, :description, :avatar1, :avatar2, :avatar3, :avatar4, :avatar5, :name, :address, :phone, :website, :latitude, :longitude, :category_id, :computer_category)
     end
 end
