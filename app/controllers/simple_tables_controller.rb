@@ -323,7 +323,7 @@ class SimpleTablesController < ApplicationController
 
 
   def informations
-     @simple_tables = SimpleTable.where(:category_id => params[:category])
+     @simple_tables = SimpleTable.where(:category_id => params[:category]).paginate(:page => params[:page], :per_page => 10)
   end
 
   # GET /simple_tables/1

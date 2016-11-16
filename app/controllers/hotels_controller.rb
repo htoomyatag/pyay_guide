@@ -27,7 +27,7 @@ class HotelsController < ApplicationController
 
 
   def index
-    @hotels = Hotel.all
+    @hotels = Hotel.paginate(:page => params[:page], :per_page => 10)
   end
 
   # GET /hotels/1

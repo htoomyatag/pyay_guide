@@ -26,6 +26,8 @@ Rails.application.config.assets.version = '1.0'
  Rails.application.config.assets.precompile += %w( layout.css)
  Rails.application.config.assets.precompile += %w( darkblue.css)
  Rails.application.config.assets.precompile += %w( custom.css)
+ Rails.application.config.assets.precompile += %w( pagination.css)
+ 
 
  Rails.application.config.assets.precompile += %w( jquery.min.js )
  Rails.application.config.assets.precompile += %w( jquery-migrate.min.js )

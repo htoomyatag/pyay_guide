@@ -63,3 +63,9 @@ Change Quick Sidebar Width
 #title_list{
   font-size: 14px;
 }
+
+
+.pagination a{
+
+margin-left: 10px;
+}
