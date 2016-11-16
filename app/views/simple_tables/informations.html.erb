@@ -4,14 +4,21 @@
             <div class="portlet-title">
               <div class="caption">
               Informations listings
+
+       <!--        /simple_tables/new?category=bank -->
+
+           
               </div>
             </div>
 
             <div class="portlet-body form">
+
+
                 
                 <br/>
                 <p style="padding-left:20px;font-size:14px;">
           			<%= params[:category] %> informations
+          			  <a class="btn btn-primary" href="/simple_tables/new?category=<%= params[:category] %>" role="button">New record</a>
           		</p>
           <table class="table table-bordered" style="padding:30px;" >
             <thead>
@@ -23,6 +30,7 @@
 			      <th>Website</th>
 			      <th>Latitude</th>
 			      <th>Longitude</th>
+			      <th>Desc</th>
 			      <th></th>
 			      <th colspan="2"></th>
 			    </tr>
@@ -38,6 +46,7 @@
 			        <td><%= simple_table.website %></td>
 			        <td><%= simple_table.latitude %></td>
 			        <td><%= simple_table.longitude %></td>
+			        <td><%= simple_table.description %></td>
 			        <td><%= image_tag simple_table.avatar1.url(:thumb) %></td>
 			        <td><%= link_to 'Edit', edit_simple_table_path(simple_table) %></td>
 			        <td><%= link_to 'Destroy', simple_table, method: :delete, data: { confirm: 'Are you sure?' } %></td>

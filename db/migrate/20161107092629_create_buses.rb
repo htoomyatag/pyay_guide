@@ -10,6 +10,9 @@ class CreateBuses < ActiveRecord::Migration
       t.string :fromtownship
       t.string :totownship
       t.string :departuretime
+      t.string :description
+      t.string :option_phone1 
+      t.string :option_phone2
 
       t.timestamps null: false
     end

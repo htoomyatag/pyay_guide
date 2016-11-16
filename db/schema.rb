@@ -92,6 +92,9 @@ ActiveRecord::Schema.define(version: 20161108033413) do
     t.string   "fromtownship"
     t.string   "totownship"
     t.string   "departuretime"
+    t.string   "description"
+    t.string   "option_phone1"
+    t.string   "option_phone2"
     t.datetime "created_at",           null: false
     t.datetime "updated_at",           null: false
     t.string   "avatar1_file_name"
@@ -149,6 +152,9 @@ ActiveRecord::Schema.define(version: 20161108033413) do
     t.string   "latitude"
     t.string   "longitude"
     t.string   "hoteltype"
+    t.string   "description"
+    t.string   "option_phone1"
+    t.string   "option_phone2"
     t.datetime "created_at",           null: false
     t.datetime "updated_at",           null: false
     t.string   "avatar1_file_name"
@@ -207,6 +213,9 @@ ActiveRecord::Schema.define(version: 20161108033413) do
     t.string   "latitude"
     t.string   "longitude"
     t.string   "category_id"
+    t.string   "description"
+    t.string   "option_phone1"
+    t.string   "option_phone2"
     t.datetime "created_at",           null: false
     t.datetime "updated_at",           null: false
     t.string   "avatar1_file_name"

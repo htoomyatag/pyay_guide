@@ -16,6 +16,7 @@
                  <br/>
                 <p style="padding-left:20px;font-size:14px;">
                Buses informations
+                <a class="btn btn-primary" href="/buses/new" role="button">New record</a>
               </p>
               
    <table class="table table-bordered" style="padding:30px;" >
@@ -31,6 +32,7 @@
       <th>Fromtownship</th>
       <th>Totownship</th>
       <th>Departuretime</th>
+      <th>Desc</th>
       <th></th>
       <th colspan="2"></th>
     </tr>
@@ -49,6 +51,7 @@
         <td><%= bus.fromtownship %></td>
         <td><%= bus.totownship %></td>
         <td><%= bus.departuretime %></td>
+        <td><%= bus.description %></td>
         <td><%= image_tag bus.avatar1.url(:thumb) %></td>
         <td><%= link_to 'Edit', edit_bus_path(bus) %></td>
         <td><%= link_to 'Destroy', bus, method: :delete, data: { confirm: 'Are you sure?' } %></td>

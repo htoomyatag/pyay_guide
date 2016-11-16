@@ -8,6 +8,9 @@ class CreateHotels < ActiveRecord::Migration
       t.string :latitude
       t.string :longitude
       t.string :hoteltype
+      t.string :description
+      t.string :option_phone1 
+      t.string :option_phone2
 
       t.timestamps null: false
     end

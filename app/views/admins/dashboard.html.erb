@@ -10,7 +10,7 @@
     <div class="thumbnail">
       <img src="/assets/bank.ico" alt="...">
       <div class="caption">
-        <h3>Bank   </h3>
+        <h3 id="title_list"> ဘဏ္မ်ား   </h3>
         <p>can add new Bank informations here</p>
         <p>
         <%= link_to 'Enter', new_simple_table_path(:category => "bank"), :class=>"btn btn-primary" %>
@@ -24,7 +24,7 @@
     <div class="thumbnail">
       <img src="/assets/computer.ico" alt="...">
       <div class="caption">
-        <h3>Computer  </h3>
+        <h3 id="title_list">ကြန္ပ်ဴတာ ႏွင့္ မိုဘိုင္း  </h3>
         <p>can add new computer informations here</p>
         <p>
          <%= link_to 'Enter', new_simple_table_path(:category => "computer"), :class=>"btn btn-primary" %>
@@ -37,7 +37,7 @@
     <div class="thumbnail">
       <img src="/assets/hotel.ico" alt="...">
       <div class="caption">
-        <h3>Hotel  </h3>
+        <h3 id="title_list">ေဟာ္တယ္ မိုတယ္ မ်ား  </h3>
         <p>can add new hotels informations here</p>
         <p><a href="/hotels/new" class="btn btn-primary" role="button"> Enter</a></p>
       </div>
@@ -48,7 +48,7 @@
     <div class="thumbnail">
       <img src="/assets/school.png" alt="...">
       <div class="caption">
-        <h3>School  </h3>
+        <h3 id="title_list">ေက်ာင္းမ်ား  </h3>
         <p>can add new school informations here</p>
         <p>
            <%= link_to 'Enter', new_simple_table_path(:category => "education"), :class=>"btn btn-primary" %>
@@ -62,7 +62,7 @@
     <div class="thumbnail">
       <img src="/assets/hosipital.ico" alt="...">
       <div class="caption">
-        <h3>Hospital  </h3>
+        <h3 id="title_list">ေဆး႐ံုမ်ား  </h3>
         <p>can add hospital informations</p>
         <p>
          <%= link_to 'Enter', new_simple_table_path(:category => "hospital"), :class=>"btn btn-primary" %>
@@ -77,7 +77,7 @@
     <div class="thumbnail">
       <img src="/assets/famous.ico" alt="...">
       <div class="caption">
-        <h3>Famous place  </h3>
+        <h3 id="title_list">အထင္ကရေနရာမ်ား   </h3>
         <p>can add new famous place informations</p>
         <p>
            <%= link_to 'Enter', new_simple_table_path(:category => "famous_place"), :class=>"btn btn-primary" %>
@@ -91,7 +91,7 @@
     <div class="thumbnail">
       <img src="/assets/BeautySaloon.ico" alt="...">
       <div class="caption">
-        <h3>Beauty saloon  </h3>
+        <h3 id="title_list">အလွျပင္ ဆိုင္မ်ား  </h3>
         <p>can add new beauty saloon informations</p>
         <p>
            <%= link_to 'Enter', new_simple_table_path(:category => "beauty_saloon"), :class=>"btn btn-primary" %>
@@ -105,7 +105,7 @@
     <div class="thumbnail">
       <img src="/assets/tea.ico" alt="...">
       <div class="caption">
-        <h3>Teahouse  </h3>
+        <h3 id="title_list">  လၻက္ရည္ႏွင့္စားဖြယ္စံု  </h3>
         <p>can add new tea house informations</p>
         <p>
            <%= link_to 'Enter', new_simple_table_path(:category => "tea_shop"), :class=>"btn btn-primary" %>
@@ -119,7 +119,7 @@
     <div class="thumbnail">
       <img src="/assets/fuel.png" alt="...">
       <div class="caption">
-        <h3>Gas station  </h3>
+        <h3 id="title_list">  ဓာက္ဆီ ဆိုင္မ်ား  </h3>
         <p>can add new gas station informations</p>
         <p>
            <%= link_to 'Enter', new_simple_table_path(:category => "gas_station"), :class=>"btn btn-primary" %>
@@ -135,7 +135,7 @@
     <div class="thumbnail">
       <img src="/assets/restaurant.ico" alt="...">
       <div class="caption">
-        <h3>Restaurant  </h3>
+        <h3 id="title_list">Restaurant  </h3>
         <p>can add new restaurants information here</p>
         <p>
            <%= link_to 'Enter', new_simple_table_path(:category => "restaurant"), :class=>"btn btn-primary" %>
@@ -149,7 +149,7 @@
     <div class="thumbnail">
       <img src="/assets/imptcontact.ico" alt="...">
       <div class="caption">
-        <h3>Important contacts  </h3>
+        <h3 id="title_list"> အေရးေပၚဆက္သြယ္ရန္ </h3>
         <p>can add new important contacts information here</p>
         <p>
            <%= link_to 'Enter', new_simple_table_path(:category => "emergency_contact"), :class=>"btn btn-primary" %>
@@ -162,7 +162,7 @@
     <div class="thumbnail">
       <img src="/assets/shopping_mall.ico" alt="...">
       <div class="caption">
-        <h3>Shopping mall  </h3>
+        <h3 id="title_list"> ေရွာ့ပင္းေမာ္မ်ား </h3>
         <p>can add new mall informations here</p>
         <p>
              <%= link_to 'Enter', new_simple_table_path(:category => "shopping_mall"), :class=>"btn btn-primary" %>
@@ -175,7 +175,7 @@
     <div class="thumbnail">
       <img src="/assets/cycle.ico" alt="...">
       <div class="caption">
-        <h3>Cycle  </h3>
+        <h3 id="title_list"> ဆိုင္ကယ္ႏွင့္ကား </h3>
         <p>can add new informations here</p>
         <p>
           <%= link_to 'Enter', new_simple_table_path(:category => "cycle"), :class=>"btn btn-primary" %>
@@ -189,7 +189,7 @@
     <div class="thumbnail">
       <img src="/assets/electronics.ico" alt="...">
       <div class="caption">
-        <h3>Electronics shop  </h3>
+        <h3 id="title_list">  အီလတ္ထေရာနစ္  </h3>
         <p>can add new informations</p>
         <p>
           <%= link_to 'Enter', new_simple_table_path(:category => "electronic"), :class=>"btn btn-primary" %>
@@ -202,7 +202,7 @@
     <div class="thumbnail">
       <img src="/assets/busgate.ico" alt="...">
       <div class="caption">
-        <h3>Bus gate  </h3>
+        <h3 id="title_list"> ကားဂိတ္မ်ား </h3>
         <p>can add new bus gate informations</p>
         <p>
            <%= link_to 'Enter', new_bus_path, :class=>"btn btn-primary" %>
@@ -216,7 +216,7 @@
     <div class="thumbnail">
       <img src="/assets/farm.ico" alt="...">
       <div class="caption">
-        <h3>Farmer's store  </h3>
+        <h3 id="title_list"> လယ္ယာစိုက္ပ်ိဳးေရးသုံး ဆိုင္ </h3>
         <p>can add new famer informations</p>
         <p>
             <%= link_to 'Enter', new_simple_table_path(:category => "farmer"), :class=>"btn btn-primary" %>
@@ -230,7 +230,7 @@
     <div class="thumbnail">
       <img src="/assets/jewellery.png" alt="...">
       <div class="caption">
-        <h3>Jewellery shop  </h3>
+        <h3 id="title_list">စိန္ေရႊေငြရတနာ </h3>
         <p>can add new Jewellery shop informations</p>
         <p>
             <%= link_to 'Enter', new_simple_table_path(:category => "jewellery"), :class=>"btn btn-primary" %>
@@ -245,7 +245,7 @@
     <div class="thumbnail">
       <img src="/assets/ads.png" alt="...">
       <div class="caption">
-        <h3> Advertisements  </h3>
+        <h3 id="title_list"> Advertisements  </h3>
         <p>can add new advertisements informations</p>
         <p>
             <%= link_to 'Enter', new_advertisement_path, :class=>"btn btn-primary" %>
@@ -261,7 +261,7 @@
     <div class="thumbnail">
       <img src="/assets/ads.png" alt="...">
       <div class="caption">
-        <h3> Sticky Ads  </h3>
+        <h3 id="title_list"> Sticky Ads  </h3>
         <p>can add new advertisements informations</p>
         <p>
             <%= link_to 'Enter', new_stickey_advertisement_path, :class=>"btn btn-primary" %>
