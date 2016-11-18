@@ -37,9 +37,12 @@ class Advertisement < ActiveRecord::Base
 "cycle",
 "restaurant",
 "hotel",
-"bus",
-"main"
+"bus"
 ]
+
+
+MAINADS = ["yes","no"]
+
 
 
 

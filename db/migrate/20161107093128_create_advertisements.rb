@@ -4,6 +4,7 @@ class CreateAdvertisements < ActiveRecord::Migration
       t.string :category
       t.string :shop_id
       t.string :category
+      t.string :main_ads
 
       t.timestamps null: false
     end
