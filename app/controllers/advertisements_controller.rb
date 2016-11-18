@@ -21,7 +21,7 @@ class AdvertisementsController < ApplicationController
   end
 
     def my_buses_ads
-    @advertisements = Advertisement.where(:category => "buses").where(:main_ads => "no")
+    @advertisements = Advertisement.where(:category => "buses")
   
     respond_to do |format|
           my_primary_json = { :Advertisement => @advertisements.to_json(:methods => [:avatar_url])   }
@@ -36,7 +36,7 @@ class AdvertisementsController < ApplicationController
   end
 
   def my_bank_ads
-    @advertisements = Advertisement.where(:category => "bank").where(:main_ads => "no")
+    @advertisements = Advertisement.where(:category => "bank")
   
     respond_to do |format|
           my_primary_json = { :Advertisement => @advertisements.to_json(:methods => [:avatar_url])   }
@@ -52,7 +52,7 @@ class AdvertisementsController < ApplicationController
 
 
   def my_beauty_saloon_ads
-    @advertisements = Advertisement.where(:category => "beauty_saloon").where(:main_ads => "no")
+    @advertisements = Advertisement.where(:category => "beauty_saloon")
   
     respond_to do |format|
           my_primary_json = { :Advertisement => @advertisements.to_json(:methods => [:avatar_url])   }
@@ -68,7 +68,7 @@ class AdvertisementsController < ApplicationController
 
 
   def my_computer_ads
-    @advertisements = Advertisement.where(:category => "computer").where(:main_ads => "no")
+    @advertisements = Advertisement.where(:category => "computer")
   
     respond_to do |format|
           my_primary_json = { :Advertisement => @advertisements.to_json(:methods => [:avatar_url])   }
@@ -84,7 +84,7 @@ class AdvertisementsController < ApplicationController
 
 
   def my_shopping_mall_ads
-    @advertisements = Advertisement.where(:category => "shopping_mall").where(:main_ads => "no")
+    @advertisements = Advertisement.where(:category => "shopping_mall")
   
     respond_to do |format|
           my_primary_json = { :Advertisement => @advertisements.to_json(:methods => [:avatar_url])   }
@@ -100,7 +100,7 @@ class AdvertisementsController < ApplicationController
 
 
   def my_education_ads
-    @advertisements = Advertisement.where(:category => "education").where(:main_ads => "no")
+    @advertisements = Advertisement.where(:category => "education")
   
     respond_to do |format|
           my_primary_json = { :Advertisement => @advertisements.to_json(:methods => [:avatar_url])   }
@@ -116,7 +116,7 @@ class AdvertisementsController < ApplicationController
 
 
   def my_hospital_ads
-    @advertisements = Advertisement.where(:category => "hospital").where(:main_ads => "no")
+    @advertisements = Advertisement.where(:category => "hospital")
   
     respond_to do |format|
           my_primary_json = { :Advertisement => @advertisements.to_json(:methods => [:avatar_url])   }
@@ -131,7 +131,7 @@ class AdvertisementsController < ApplicationController
   end
 
   def my_store_ads
-    @advertisements = Advertisement.where(:category => "store").where(:main_ads => "no")
+    @advertisements = Advertisement.where(:category => "store")
   
     respond_to do |format|
           my_primary_json = { :Advertisement => @advertisements.to_json(:methods => [:avatar_url])   }
@@ -147,7 +147,7 @@ class AdvertisementsController < ApplicationController
 
 
   def my_famous_place_ads
-    @advertisements = Advertisement.where(:category => "famous_place").where(:main_ads => "no")
+    @advertisements = Advertisement.where(:category => "famous_place")
   
     respond_to do |format|
           my_primary_json = { :Advertisement => @advertisements.to_json(:methods => [:avatar_url])   }
@@ -163,7 +163,7 @@ class AdvertisementsController < ApplicationController
 
 
   def my_gas_station_ads
-    @advertisements = Advertisement.where(:category => "gas_station").where(:main_ads => "no")
+    @advertisements = Advertisement.where(:category => "gas_station")
   
     respond_to do |format|
           my_primary_json = { :Advertisement => @advertisements.to_json(:methods => [:avatar_url])   }
@@ -179,7 +179,7 @@ class AdvertisementsController < ApplicationController
 
 
   def my_emergency_contact_ads
-    @advertisements = Advertisement.where(:category => "emergency_contact").where(:main_ads => "no")
+    @advertisements = Advertisement.where(:category => "emergency_contact")
   
     respond_to do |format|
           my_primary_json = { :Advertisement => @advertisements.to_json(:methods => [:avatar_url])   }
@@ -194,7 +194,7 @@ class AdvertisementsController < ApplicationController
   end
 
   def my_jewellery_ads
-    @advertisements = Advertisement.where(:category => "jewellery").where(:main_ads => "no")
+    @advertisements = Advertisement.where(:category => "jewellery")
   
     respond_to do |format|
           my_primary_json = { :Advertisement => @advertisements.to_json(:methods => [:avatar_url])   }
@@ -210,7 +210,7 @@ class AdvertisementsController < ApplicationController
 
 
   def my_farmer_ads
-    @advertisements = Advertisement.where(:category => "farmer").where(:main_ads => "no")
+    @advertisements = Advertisement.where(:category => "farmer")
   
     respond_to do |format|
           my_primary_json = { :Advertisement => @advertisements.to_json(:methods => [:avatar_url])   }
@@ -227,7 +227,7 @@ class AdvertisementsController < ApplicationController
 
 
   def my_electronic_ads
-    @advertisements = Advertisement.where(:category => "electronic").where(:main_ads => "no")
+    @advertisements = Advertisement.where(:category => "electronic")
   
     respond_to do |format|
           my_primary_json = { :Advertisement => @advertisements.to_json(:methods => [:avatar_url])   }
@@ -244,7 +244,7 @@ class AdvertisementsController < ApplicationController
 
 
   def my_tea_shop_ads
-    @advertisements = Advertisement.where(:category => "tea_shop").where(:main_ads => "no")
+    @advertisements = Advertisement.where(:category => "tea_shop")
   
     respond_to do |format|
           my_primary_json = { :Advertisement => @advertisements.to_json(:methods => [:avatar_url])   }
@@ -260,7 +260,7 @@ class AdvertisementsController < ApplicationController
 
 
   def my_cycle_ads
-    @advertisements = Advertisement.where(:category => "cycle").where(:main_ads => "no")
+    @advertisements = Advertisement.where(:category => "cycle")
   
     respond_to do |format|
           my_primary_json = { :Advertisement => @advertisements.to_json(:methods => [:avatar_url])   }
@@ -276,7 +276,7 @@ class AdvertisementsController < ApplicationController
 
 
   def my_restaurant_ads
-    @advertisements = Advertisement.where(:category => "restaurant").where(:main_ads => "no")
+    @advertisements = Advertisement.where(:category => "restaurant")
   
     respond_to do |format|
           my_primary_json = { :Advertisement => @advertisements.to_json(:methods => [:avatar_url])   }
@@ -292,7 +292,7 @@ class AdvertisementsController < ApplicationController
 
 
   def my_hotel_ads
-    @advertisements = Advertisement.where(:category => "hotel").where(:main_ads => "no")
+    @advertisements = Advertisement.where(:category => "hotel")
   
     respond_to do |format|
           my_primary_json = { :Advertisement => @advertisements.to_json(:methods => [:avatar_url])   }

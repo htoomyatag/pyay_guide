@@ -323,7 +323,7 @@ class SimpleTablesController < ApplicationController
 
 
   def informations
-     @simple_tables = SimpleTable.where(:category_id => params[:category]).paginate(:page => params[:page], :per_page => 10)
+     @simple_tables = SimpleTable.where(:category_id => params[:category]).paginate(:page => params[:page], :per_page => 10).order('created_at DESC')
   end
 
   # GET /simple_tables/1
@@ -361,7 +361,7 @@ class SimpleTablesController < ApplicationController
   def update
     respond_to do |format|
       if @simple_table.update(simple_table_params)
-        format.html { redirect_to informations_path, notice: 'Simple table was successfully updated.' }
+        format.html { redirect_to informations_path(:category => @simple_table.category_id), notice: 'Simple table was successfully updated.' }
         format.json { render :show, status: :ok, location: @simple_table }
       else
         format.html { render :edit }
@@ -375,7 +375,7 @@ class SimpleTablesController < ApplicationController
   def destroy
     @simple_table.destroy
     respond_to do |format|
-      format.html { redirect_to informations_path, notice: 'Simple table was successfully destroyed.' }
+      format.html { redirect_to informations_path(:category => @simple_table.category_id), notice: 'Simple table was successfully destroyed.' }
       format.json { head :no_content }
     end
   end

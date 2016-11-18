@@ -21,7 +21,7 @@ class SimpleTable < ActiveRecord::Base
 
 
      COMCATEGORY = ["ကြန္ပ်ဴတာ",
-"မိုဘိုင္း",
+"ဓာတ္ပုံႏွင့္ မိတၲဴမ်ား",
 "မိတၲဳ"]
 
 

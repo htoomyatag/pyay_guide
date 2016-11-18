@@ -25,7 +25,7 @@ class BusesController < ApplicationController
 
 
   def index
-    @buses = Bus.paginate(:page => params[:page], :per_page => 10)
+    @buses = Bus.paginate(:page => params[:page], :per_page => 10).order('created_at DESC')
   end
 
   # GET /buses/1
