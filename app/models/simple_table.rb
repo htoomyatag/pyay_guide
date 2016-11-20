@@ -20,9 +20,14 @@ class SimpleTable < ActiveRecord::Base
       validates_attachment_content_type :avatar5, content_type: /\Aimage\/.*\z/
 
 
-     COMCATEGORY = ["ကြန္ပ်ဴတာ",
-"ဓာတ္ပုံႏွင့္ မိတၲဴမ်ား",
-"မိတၲဳ"]
+     COMCATEGORY = [
+
+            "ကြန္ပ်ဴတာ",
+            "မိုဘိုင္းဖုန္း",
+            "မိတၲဴဆိုင္မ်ား",
+            "ဓါတ္ပံုုဆိုုင္"
+
+     ]
 
 
 
