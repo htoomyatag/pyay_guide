@@ -9,6 +9,7 @@
             <label class="col-md-3 control-label"> Image Upload</label>
             <div class="col-md-9">
     <%= f.file_field :avatar1 %>
+     <%= image_tag @stickey_advertisement.avatar1.url(:thumb) %>
     </div>
         </div>
 
