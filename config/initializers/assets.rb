@@ -63,8 +63,9 @@ Rails.application.config.assets.version = '1.0'
  Rails.application.config.assets.precompile += %w( tasks.js )
  Rails.application.config.assets.precompile += %w( daterangepicker.js )
  Rails.application.config.assets.precompile += %w( jquery_ujs.js )
+Rails.application.config.assets.precompile += %w( jquery-1.10.2.js )
 
 
 
-
-
+Rails.application.config.assets.precompile += %w( jquery-1.12.4.js )
+Rails.application.config.assets.precompile += %w( jquery-ui.js )

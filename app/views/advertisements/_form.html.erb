@@ -1,5 +1,6 @@
 
 
+
 <%= form_for @advertisement, :html => {:class => "form-horizontal", :multipart => true } do |f| %>
 
  <div class="form-group">
@@ -25,8 +26,12 @@
             <label class="col-md-3 control-label">Shop</label>
             <div class="col-md-9">
     <%= f.text_field :shop_id %>
+
+
   </div>
     </div>
+
+
  
 
         <div class="form-group">
@@ -47,3 +52,25 @@
           </div>
         </div>
 <% end %>
+
+
+
+
+
+
+
+
+
+
+<script>
+  $(function() {
+   var aok = <%= raw @shop_names %>;
+    var availableTags = aok;
+
+    $("#advertisement_shop_id").autocomplete({
+      source: availableTags
+    });
+  });
+
+
+</script>

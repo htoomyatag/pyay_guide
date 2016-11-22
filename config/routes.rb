@@ -7,6 +7,9 @@ Rails.application.routes.draw do
   resources :hotels
   resources :buses
   resources :advertisements
+  get 'get_shop_name' => 'advertisements#get_shop_name', :as => :get_shop_name
+   
+
   resources :buses
   resources :advertisements
   match "airline_ads" => "advertisements#airline_ads", as: :airline_ads, via: [:get, :post]

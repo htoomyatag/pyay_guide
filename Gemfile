@@ -34,7 +34,7 @@ gem 'json_pure', '~> 1.8.2'
 gem 'active_model_serializers'
 gem 'devise'
 gem 'devise-token_authenticatable', :branch => 'fix-authenticatable-require'
-
+gem 'rails4-autocomplete'
 # Use Unicorn as the app server
 # gem 'unicorn'
 

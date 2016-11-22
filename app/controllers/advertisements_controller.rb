@@ -5,6 +5,10 @@ class AdvertisementsController < ApplicationController
   # GET /advertisements.json
 
 
+
+
+
+
     def my_main_ads
     @advertisements = Advertisement.where(:main_ads => "yes")
   
@@ -321,6 +325,8 @@ class AdvertisementsController < ApplicationController
   # GET /advertisements/new
   def new
     @advertisement = Advertisement.new
+    @shop_names = SimpleTable.distinct.pluck(:name)
+
   end
 
   # GET /advertisements/1/edit
