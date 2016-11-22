@@ -134,7 +134,7 @@
         </div>
 
 
- <% if params[:category] == "computer" or  %>
+ <% if params[:category] == "computer" %>
         
 
   <div class="form-group">
@@ -149,7 +149,17 @@
 <div class="row">
           <div class="col-md-offset-3 col-md-9">
             <%= f.submit :class=>"btn blue" %>
-            <button type="button" class="btn default">Cancel</button>
+
+             <% if !params[:category].nil? %>
+
+                <a href="/informations?category=<%= params[:category] %>" class="btn default" role="button"> Cancel </a>
+
+             <% else %>
+
+               <a href="/informations?category=<%= @simple_table.category_id %>" class="btn default" role="button"> Cancel </a>
+
+             <% end %>
+
           </div>
         </div>
 <% end %>
