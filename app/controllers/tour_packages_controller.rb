@@ -13,7 +13,7 @@ class TourPackagesController < ApplicationController
 
     respond_to do |format|
           my_primary_json = { :Package => @tour_packages.to_json( :only => [:package_name, :price, :detail, :duration])   }
-          my_seconday_json = my_primary_json.to_json.gsub('\\', '')
+          my_seconday_json = my_primary_json.to_json.gsub('\\', '').gsub("u0026","&")
           a = '"['
           b = ']"'
           my_third_json = my_seconday_json.gsub(a , "[")

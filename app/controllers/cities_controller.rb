@@ -14,7 +14,7 @@ class CitiesController < ApplicationController
   
     respond_to do |format|
           my_primary_json = { :City => @cities.to_json( :only => [:title])   }
-          my_seconday_json = my_primary_json.to_json.gsub('\\', '')
+          my_seconday_json = my_primary_json.to_json.gsub('\\', '').gsub("u0026","&")
           a = '"['
           b = ']"'
           my_third_json = my_seconday_json.gsub(a , "[")

@@ -14,7 +14,7 @@ class AdvertisementsController < ApplicationController
   
     respond_to do |format|
           my_primary_json = { :Advertisement => @advertisements.to_json(:methods => [:avatar_url])   }
-          my_seconday_json = my_primary_json.to_json.gsub('\\', '')
+          my_seconday_json = my_primary_json.to_json.gsub('\\', '').gsub("u0026","&")
           a = '"['
           b = ']"'
           my_third_json = my_seconday_json.gsub(a , "[")
@@ -29,7 +29,7 @@ class AdvertisementsController < ApplicationController
   
     respond_to do |format|
           my_primary_json = { :Advertisement => @advertisements.to_json(:methods => [:avatar_url])   }
-          my_seconday_json = my_primary_json.to_json.gsub('\\', '')
+          my_seconday_json = my_primary_json.to_json.gsub('\\', '').gsub("u0026","&")
           a = '"['
           b = ']"'
           my_third_json = my_seconday_json.gsub(a , "[")
@@ -44,7 +44,7 @@ class AdvertisementsController < ApplicationController
   
     respond_to do |format|
           my_primary_json = { :Advertisement => @advertisements.to_json(:methods => [:avatar_url])   }
-          my_seconday_json = my_primary_json.to_json.gsub('\\', '')
+          my_seconday_json = my_primary_json.to_json.gsub('\\', '').gsub("u0026","&")
           a = '"['
           b = ']"'
           my_third_json = my_seconday_json.gsub(a , "[")
@@ -60,7 +60,7 @@ class AdvertisementsController < ApplicationController
   
     respond_to do |format|
           my_primary_json = { :Advertisement => @advertisements.to_json(:methods => [:avatar_url])   }
-          my_seconday_json = my_primary_json.to_json.gsub('\\', '')
+          my_seconday_json = my_primary_json.to_json.gsub('\\', '').gsub("u0026","&")
           a = '"['
           b = ']"'
           my_third_json = my_seconday_json.gsub(a , "[")
@@ -76,7 +76,7 @@ class AdvertisementsController < ApplicationController
   
     respond_to do |format|
           my_primary_json = { :Advertisement => @advertisements.to_json(:methods => [:avatar_url])   }
-          my_seconday_json = my_primary_json.to_json.gsub('\\', '')
+          my_seconday_json = my_primary_json.to_json.gsub('\\', '').gsub("u0026","&")
           a = '"['
           b = ']"'
           my_third_json = my_seconday_json.gsub(a , "[")
@@ -92,7 +92,7 @@ class AdvertisementsController < ApplicationController
   
     respond_to do |format|
           my_primary_json = { :Advertisement => @advertisements.to_json(:methods => [:avatar_url])   }
-          my_seconday_json = my_primary_json.to_json.gsub('\\', '')
+          my_seconday_json = my_primary_json.to_json.gsub('\\', '').gsub("u0026","&")
           a = '"['
           b = ']"'
           my_third_json = my_seconday_json.gsub(a , "[")
@@ -108,7 +108,7 @@ class AdvertisementsController < ApplicationController
   
     respond_to do |format|
           my_primary_json = { :Advertisement => @advertisements.to_json(:methods => [:avatar_url])   }
-          my_seconday_json = my_primary_json.to_json.gsub('\\', '')
+          my_seconday_json = my_primary_json.to_json.gsub('\\', '').gsub("u0026","&")
           a = '"['
           b = ']"'
           my_third_json = my_seconday_json.gsub(a , "[")
@@ -124,7 +124,7 @@ class AdvertisementsController < ApplicationController
   
     respond_to do |format|
           my_primary_json = { :Advertisement => @advertisements.to_json(:methods => [:avatar_url])   }
-          my_seconday_json = my_primary_json.to_json.gsub('\\', '')
+          my_seconday_json = my_primary_json.to_json.gsub('\\', '').gsub("u0026","&")
           a = '"['
           b = ']"'
           my_third_json = my_seconday_json.gsub(a , "[")
@@ -139,7 +139,7 @@ class AdvertisementsController < ApplicationController
   
     respond_to do |format|
           my_primary_json = { :Advertisement => @advertisements.to_json(:methods => [:avatar_url])   }
-          my_seconday_json = my_primary_json.to_json.gsub('\\', '')
+          my_seconday_json = my_primary_json.to_json.gsub('\\', '').gsub("u0026","&")
           a = '"['
           b = ']"'
           my_third_json = my_seconday_json.gsub(a , "[")
@@ -155,7 +155,7 @@ class AdvertisementsController < ApplicationController
   
     respond_to do |format|
           my_primary_json = { :Advertisement => @advertisements.to_json(:methods => [:avatar_url])   }
-          my_seconday_json = my_primary_json.to_json.gsub('\\', '')
+          my_seconday_json = my_primary_json.to_json.gsub('\\', '').gsub("u0026","&")
           a = '"['
           b = ']"'
           my_third_json = my_seconday_json.gsub(a , "[")
@@ -171,7 +171,7 @@ class AdvertisementsController < ApplicationController
   
     respond_to do |format|
           my_primary_json = { :Advertisement => @advertisements.to_json(:methods => [:avatar_url])   }
-          my_seconday_json = my_primary_json.to_json.gsub('\\', '')
+          my_seconday_json = my_primary_json.to_json.gsub('\\', '').gsub("u0026","&")
           a = '"['
           b = ']"'
           my_third_json = my_seconday_json.gsub(a , "[")
@@ -187,7 +187,7 @@ class AdvertisementsController < ApplicationController
   
     respond_to do |format|
           my_primary_json = { :Advertisement => @advertisements.to_json(:methods => [:avatar_url])   }
-          my_seconday_json = my_primary_json.to_json.gsub('\\', '')
+          my_seconday_json = my_primary_json.to_json.gsub('\\', '').gsub("u0026","&")
           a = '"['
           b = ']"'
           my_third_json = my_seconday_json.gsub(a , "[")
@@ -202,7 +202,7 @@ class AdvertisementsController < ApplicationController
   
     respond_to do |format|
           my_primary_json = { :Advertisement => @advertisements.to_json(:methods => [:avatar_url])   }
-          my_seconday_json = my_primary_json.to_json.gsub('\\', '')
+          my_seconday_json = my_primary_json.to_json.gsub('\\', '').gsub("u0026","&")
           a = '"['
           b = ']"'
           my_third_json = my_seconday_json.gsub(a , "[")
@@ -218,7 +218,7 @@ class AdvertisementsController < ApplicationController
   
     respond_to do |format|
           my_primary_json = { :Advertisement => @advertisements.to_json(:methods => [:avatar_url])   }
-          my_seconday_json = my_primary_json.to_json.gsub('\\', '')
+          my_seconday_json = my_primary_json.to_json.gsub('\\', '').gsub("u0026","&")
           a = '"['
           b = ']"'
           my_third_json = my_seconday_json.gsub(a , "[")
@@ -235,7 +235,7 @@ class AdvertisementsController < ApplicationController
   
     respond_to do |format|
           my_primary_json = { :Advertisement => @advertisements.to_json(:methods => [:avatar_url])   }
-          my_seconday_json = my_primary_json.to_json.gsub('\\', '')
+          my_seconday_json = my_primary_json.to_json.gsub('\\', '').gsub("u0026","&")
           a = '"['
           b = ']"'
           my_third_json = my_seconday_json.gsub(a , "[")
@@ -252,7 +252,7 @@ class AdvertisementsController < ApplicationController
   
     respond_to do |format|
           my_primary_json = { :Advertisement => @advertisements.to_json(:methods => [:avatar_url])   }
-          my_seconday_json = my_primary_json.to_json.gsub('\\', '')
+          my_seconday_json = my_primary_json.to_json.gsub('\\', '').gsub("u0026","&")
           a = '"['
           b = ']"'
           my_third_json = my_seconday_json.gsub(a , "[")
@@ -268,7 +268,7 @@ class AdvertisementsController < ApplicationController
   
     respond_to do |format|
           my_primary_json = { :Advertisement => @advertisements.to_json(:methods => [:avatar_url])   }
-          my_seconday_json = my_primary_json.to_json.gsub('\\', '')
+          my_seconday_json = my_primary_json.to_json.gsub('\\', '').gsub("u0026","&")
           a = '"['
           b = ']"'
           my_third_json = my_seconday_json.gsub(a , "[")
@@ -284,7 +284,7 @@ class AdvertisementsController < ApplicationController
   
     respond_to do |format|
           my_primary_json = { :Advertisement => @advertisements.to_json(:methods => [:avatar_url])   }
-          my_seconday_json = my_primary_json.to_json.gsub('\\', '')
+          my_seconday_json = my_primary_json.to_json.gsub('\\', '').gsub("u0026","&")
           a = '"['
           b = ']"'
           my_third_json = my_seconday_json.gsub(a , "[")
@@ -300,7 +300,7 @@ class AdvertisementsController < ApplicationController
   
     respond_to do |format|
           my_primary_json = { :Advertisement => @advertisements.to_json(:methods => [:avatar_url])   }
-          my_seconday_json = my_primary_json.to_json.gsub('\\', '')
+          my_seconday_json = my_primary_json.to_json.gsub('\\', '').gsub("u0026","&")
           a = '"['
           b = ']"'
           my_third_json = my_seconday_json.gsub(a , "[")

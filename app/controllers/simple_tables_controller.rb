@@ -13,7 +13,7 @@ class SimpleTablesController < ApplicationController
   
     respond_to do |format|
           my_primary_json = { :SimpleTable => @simple_tables.to_json(:methods => [:avatar_url5,:avatar_url1,:avatar_url2,:avatar_url3,:avatar_url4])   }
-          my_seconday_json = my_primary_json.to_json.gsub('\\', '')
+          my_seconday_json = my_primary_json.to_json.gsub('\\', '').gsub("u0026","&")
           a = '"['
           b = ']"'
           my_third_json = my_seconday_json.gsub(a , "[")
@@ -32,7 +32,7 @@ class SimpleTablesController < ApplicationController
           my_primary_json = { 
             :Advertisement => @bank_ads.to_json(:methods => [:avatar_url]),
             :SimpleTable => @simple_tables.to_json(:methods => [:avatar_url5,:avatar_url1,:avatar_url2,:avatar_url3,:avatar_url4])   }
-          my_seconday_json = my_primary_json.to_json.gsub('\\', '')
+          my_seconday_json = my_primary_json.to_json.gsub('\\', '').gsub("u0026","&")
           a = '"['
           b = ']"'
           my_third_json = my_seconday_json.gsub(a , "[")
@@ -52,7 +52,7 @@ class SimpleTablesController < ApplicationController
             :Advertisement => @bank_ads.to_json(:methods => [:avatar_url]),
             :SimpleTable => @simple_tables.to_json(:methods => [:avatar_url5,:avatar_url1,:avatar_url2,:avatar_url3,:avatar_url4])   }
           
-          my_seconday_json = my_primary_json.to_json.gsub('\\', '')
+          my_seconday_json = my_primary_json.to_json.gsub('\\', '').gsub("u0026","&")
           a = '"['
           b = ']"'
           my_third_json = my_seconday_json.gsub(a , "[")
@@ -71,7 +71,7 @@ class SimpleTablesController < ApplicationController
           my_primary_json = { 
                :Advertisement => @bank_ads.to_json(:methods => [:avatar_url]),
             :SimpleTable => @simple_tables.to_json(:methods => [:avatar_url5,:avatar_url1,:avatar_url2,:avatar_url3,:avatar_url4])   }
-          my_seconday_json = my_primary_json.to_json.gsub('\\', '')
+          my_seconday_json = my_primary_json.to_json.gsub('\\', '').gsub("u0026","&")
           a = '"['
           b = ']"'
           my_third_json = my_seconday_json.gsub(a , "[")
@@ -89,7 +89,7 @@ class SimpleTablesController < ApplicationController
           my_primary_json = { 
                :Advertisement => @bank_ads.to_json(:methods => [:avatar_url]),
             :SimpleTable => @simple_tables.to_json(:methods => [:avatar_url5,:avatar_url1,:avatar_url2,:avatar_url3,:avatar_url4])   }
-          my_seconday_json = my_primary_json.to_json.gsub('\\', '')
+          my_seconday_json = my_primary_json.to_json.gsub('\\', '').gsub("u0026","&")
           a = '"['
           b = ']"'
           my_third_json = my_seconday_json.gsub(a , "[")
@@ -107,7 +107,7 @@ class SimpleTablesController < ApplicationController
           my_primary_json = { 
                :Advertisement => @bank_ads.to_json(:methods => [:avatar_url]),
             :SimpleTable => @simple_tables.to_json(:methods => [:avatar_url5,:avatar_url1,:avatar_url2,:avatar_url3,:avatar_url4])   }
-          my_seconday_json = my_primary_json.to_json.gsub('\\', '')
+          my_seconday_json = my_primary_json.to_json.gsub('\\', '').gsub("u0026","&")
           a = '"['
           b = ']"'
           my_third_json = my_seconday_json.gsub(a , "[")
@@ -125,7 +125,7 @@ class SimpleTablesController < ApplicationController
           my_primary_json = {
                :Advertisement => @bank_ads.to_json(:methods => [:avatar_url]),
            :SimpleTable => @simple_tables.to_json(:methods => [:avatar_url5,:avatar_url1,:avatar_url2,:avatar_url3,:avatar_url4])   }
-          my_seconday_json = my_primary_json.to_json.gsub('\\', '')
+          my_seconday_json = my_primary_json.to_json.gsub('\\', '').gsub("u0026","&")
           a = '"['
           b = ']"'
           my_third_json = my_seconday_json.gsub(a , "[")
@@ -143,7 +143,7 @@ class SimpleTablesController < ApplicationController
           my_primary_json = { 
                :Advertisement => @bank_ads.to_json(:methods => [:avatar_url]),
             :SimpleTable => @simple_tables.to_json(:methods => [:avatar_url5,:avatar_url1,:avatar_url2,:avatar_url3,:avatar_url4])   }
-          my_seconday_json = my_primary_json.to_json.gsub('\\', '')
+          my_seconday_json = my_primary_json.to_json.gsub('\\', '').gsub("u0026","&")
           a = '"['
           b = ']"'
           my_third_json = my_seconday_json.gsub(a , "[")
@@ -161,7 +161,7 @@ class SimpleTablesController < ApplicationController
           my_primary_json = {
                :Advertisement => @bank_ads.to_json(:methods => [:avatar_url]),
            :SimpleTable => @simple_tables.to_json(:methods => [:avatar_url5,:avatar_url1,:avatar_url2,:avatar_url3,:avatar_url4])   }
-          my_seconday_json = my_primary_json.to_json.gsub('\\', '')
+          my_seconday_json = my_primary_json.to_json.gsub('\\', '').gsub("u0026","&")
           a = '"['
           b = ']"'
           my_third_json = my_seconday_json.gsub(a , "[")
@@ -179,7 +179,7 @@ class SimpleTablesController < ApplicationController
           my_primary_json = {
                :Advertisement => @bank_ads.to_json(:methods => [:avatar_url]),
            :SimpleTable => @simple_tables.to_json(:methods => [:avatar_url5,:avatar_url1,:avatar_url2,:avatar_url3,:avatar_url4])   }
-          my_seconday_json = my_primary_json.to_json.gsub('\\', '')
+          my_seconday_json = my_primary_json.to_json.gsub('\\', '').gsub("u0026","&")
           a = '"['
           b = ']"'
           my_third_json = my_seconday_json.gsub(a , "[")
@@ -197,7 +197,7 @@ class SimpleTablesController < ApplicationController
           my_primary_json = { 
                :Advertisement => @bank_ads.to_json(:methods => [:avatar_url]),
             :SimpleTable => @simple_tables.to_json(:methods => [:avatar_url5,:avatar_url1,:avatar_url2,:avatar_url3,:avatar_url4])   }
-          my_seconday_json = my_primary_json.to_json.gsub('\\', '')
+          my_seconday_json = my_primary_json.to_json.gsub('\\', '').gsub("u0026","&")
           a = '"['
           b = ']"'
           my_third_json = my_seconday_json.gsub(a , "[")
@@ -215,7 +215,7 @@ class SimpleTablesController < ApplicationController
           my_primary_json = { 
                :Advertisement => @bank_ads.to_json(:methods => [:avatar_url]),
             :SimpleTable => @simple_tables.to_json(:methods => [:avatar_url5,:avatar_url1,:avatar_url2,:avatar_url3,:avatar_url4])   }
-          my_seconday_json = my_primary_json.to_json.gsub('\\', '')
+          my_seconday_json = my_primary_json.to_json.gsub('\\', '').gsub("u0026","&")
           a = '"['
           b = ']"'
           my_third_json = my_seconday_json.gsub(a , "[")
@@ -233,7 +233,7 @@ class SimpleTablesController < ApplicationController
           my_primary_json = { 
                :Advertisement => @bank_ads.to_json(:methods => [:avatar_url]),
             :SimpleTable => @simple_tables.to_json(:methods => [:avatar_url5,:avatar_url1,:avatar_url2,:avatar_url3,:avatar_url4])   }
-          my_seconday_json = my_primary_json.to_json.gsub('\\', '')
+          my_seconday_json = my_primary_json.to_json.gsub('\\', '').gsub("u0026","&")
           a = '"['
           b = ']"'
           my_third_json = my_seconday_json.gsub(a , "[")
@@ -251,7 +251,7 @@ class SimpleTablesController < ApplicationController
           my_primary_json = { 
                :Advertisement => @bank_ads.to_json(:methods => [:avatar_url]),
             :SimpleTable => @simple_tables.to_json(:methods => [:avatar_url5,:avatar_url1,:avatar_url2,:avatar_url3,:avatar_url4])   }
-          my_seconday_json = my_primary_json.to_json.gsub('\\', '')
+          my_seconday_json = my_primary_json.to_json.gsub('\\', '').gsub("u0026","&")
           a = '"['
           b = ']"'
           my_third_json = my_seconday_json.gsub(a , "[")
@@ -269,7 +269,7 @@ class SimpleTablesController < ApplicationController
           my_primary_json = { 
                :Advertisement => @bank_ads.to_json(:methods => [:avatar_url]),
             :SimpleTable => @simple_tables.to_json(:methods => [:avatar_url5,:avatar_url1,:avatar_url2,:avatar_url3,:avatar_url4])   }
-          my_seconday_json = my_primary_json.to_json.gsub('\\', '')
+          my_seconday_json = my_primary_json.to_json.gsub('\\', '').gsub("u0026","&")
           a = '"['
           b = ']"'
           my_third_json = my_seconday_json.gsub(a , "[")
@@ -287,7 +287,7 @@ class SimpleTablesController < ApplicationController
           my_primary_json = { 
                :Advertisement => @bank_ads.to_json(:methods => [:avatar_url]),
             :SimpleTable => @simple_tables.to_json(:methods => [:avatar_url5,:avatar_url1,:avatar_url2,:avatar_url3,:avatar_url4])   }
-          my_seconday_json = my_primary_json.to_json.gsub('\\', '')
+          my_seconday_json = my_primary_json.to_json.gsub('\\', '').gsub("u0026","&")
           a = '"['
           b = ']"'
           my_third_json = my_seconday_json.gsub(a , "[")
@@ -305,7 +305,7 @@ class SimpleTablesController < ApplicationController
           my_primary_json = { 
               :Advertisement => @bank_ads.to_json(:methods => [:avatar_url]),
             :SimpleTable => @simple_tables.to_json(:methods => [:avatar_url5,:avatar_url1,:avatar_url2,:avatar_url3,:avatar_url4])   }
-          my_seconday_json = my_primary_json.to_json.gsub('\\', '')
+          my_seconday_json = my_primary_json.to_json.gsub('\\', '').gsub("u0026","&")
           a = '"['
           b = ']"'
           my_third_json = my_seconday_json.gsub(a , "[")

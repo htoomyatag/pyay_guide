@@ -27,7 +27,7 @@ class CarlinesController < ApplicationController
            :CarlineDetail => @carline_info.to_json( :only => [:name,:address, :phone, :website, :email], :methods => [:avatar_url]), 
             :Rating => @ratings.to_json( :only => [:username, :rate_number, :rate_name, :rate_category]),  
            :Carline => @carlines.to_json( :only => [:arrival_time,:departure_time,:days,:name,:address, :phone, :website, :email, :from, :to], :methods => [:avatar_url])   }
-          my_seconday_json = my_primary_json.to_json.gsub('\\', '')
+          my_seconday_json = my_primary_json.to_json.gsub('\\', '').gsub("u0026","&")
           a = '"['
           b = ']"'
           my_third_json = my_seconday_json.gsub(a , "[")
