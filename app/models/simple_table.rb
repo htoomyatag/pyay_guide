@@ -32,27 +32,27 @@ class SimpleTable < ActiveRecord::Base
 
 
       def avatar_url1
-            avatar1.url(:medium)
+            avatar1.url
       end
 
 
       def avatar_url2
-            avatar2.url(:medium)
+            avatar2.url
       end
 
 
-            def avatar_url3
-            avatar3.url(:medium)
+      def avatar_url3
+            avatar3.url
       end
 
 
-            def avatar_url4
-            avatar4.url(:medium)
+      def avatar_url4
+            avatar4.url
       end
 
 
       def avatar_url5
-            avatar5.url(:medium)
+            avatar5.url
       end
 
       

@@ -47,7 +47,7 @@ MAINADS = ["yes","no"]
 
 
       def avatar_url
-            avatar1.url(:medium)
+            avatar1.url
       end
 
 
