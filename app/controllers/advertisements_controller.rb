@@ -5,11 +5,7 @@ class AdvertisementsController < ApplicationController
   # GET /advertisements.json
 
 
-
-
-
-
-    def my_main_ads
+  def my_main_ads
     @advertisements = Advertisement.where(:main_ads => "yes")
   
     respond_to do |format|
@@ -24,7 +20,7 @@ class AdvertisementsController < ApplicationController
     end
   end
 
-    def my_buses_ads
+  def my_buses_ads
     @advertisements = Advertisement.where(:category => "buses")
   
     respond_to do |format|

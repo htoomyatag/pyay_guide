@@ -9,7 +9,7 @@ class RestaurantsController < ApplicationController
 
 
   def my_restaurant
-    @restaurants = Restaurant.all
+    @restaurants = Restaurant.all.order('id DESC')
     @ratings = Rating.where(:rate_category => "Restaurant")
 
 

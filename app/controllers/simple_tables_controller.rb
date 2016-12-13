@@ -25,7 +25,7 @@ class SimpleTablesController < ApplicationController
 
 
   def my_bank
-    @simple_tables = SimpleTable.where(:category_id => "bank")
+    @simple_tables = SimpleTable.where(:category_id => "bank").order('id DESC')
     @bank_ads = Advertisement.where(:category => "bank")
   
     respond_to do |format|
@@ -36,7 +36,7 @@ class SimpleTablesController < ApplicationController
           a = '"['
           b = ']"'
           my_third_json = my_seconday_json.gsub(a , "[")
-          my_fourth_json = my_third_json.gsub(b , "]")
+          my_fourth_json = my_third_json.gsub(b , "]").gsub('rn','')
           format.json {render json: my_fourth_json}
           format.text {render text: my_fourth_json}
     end
@@ -44,7 +44,7 @@ class SimpleTablesController < ApplicationController
 
 
   def my_beauty_saloon
-    @simple_tables = SimpleTable.where(:category_id => "beauty_saloon")
+    @simple_tables = SimpleTable.where(:category_id => "beauty_saloon").order('id DESC')
     @bank_ads = Advertisement.where(:category => "beauty_saloon")
   
     respond_to do |format|
@@ -63,7 +63,7 @@ class SimpleTablesController < ApplicationController
   end
 
   def my_computer
-    @simple_tables = SimpleTable.where(:category_id => "computer")
+    @simple_tables = SimpleTable.where(:category_id => "computer").order('id DESC')
     @bank_ads = Advertisement.where(:category => "computer")
   
     respond_to do |format|
@@ -82,7 +82,7 @@ class SimpleTablesController < ApplicationController
   end
 
   def my_shopping_mall
-    @simple_tables = SimpleTable.where(:category_id => "shopping_mall")
+    @simple_tables = SimpleTable.where(:category_id => "shopping_mall").order('id DESC')
         @bank_ads = Advertisement.where(:category => "shopping_mall")
   
     respond_to do |format|
@@ -100,7 +100,7 @@ class SimpleTablesController < ApplicationController
   end
 
   def my_education
-    @simple_tables = SimpleTable.where(:category_id => "education")
+    @simple_tables = SimpleTable.where(:category_id => "education").order('id DESC')
             @bank_ads = Advertisement.where(:category => "education")
   
     respond_to do |format|
@@ -118,7 +118,7 @@ class SimpleTablesController < ApplicationController
   end
 
   def my_hospital
-    @simple_tables = SimpleTable.where(:category_id => "hospital")
+    @simple_tables = SimpleTable.where(:category_id => "hospital").order('id DESC')
          @bank_ads = Advertisement.where(:category => "hospital")
   
     respond_to do |format|
@@ -136,7 +136,7 @@ class SimpleTablesController < ApplicationController
   end
 
   def my_store
-    @simple_tables = SimpleTable.where(:category_id => "store")
+    @simple_tables = SimpleTable.where(:category_id => "store").order('id DESC')
       @bank_ads = Advertisement.where(:category => "store")
   
     respond_to do |format|
@@ -154,7 +154,7 @@ class SimpleTablesController < ApplicationController
   end
 
   def my_famous_place
-    @simple_tables = SimpleTable.where(:category_id => "famous_place")
+    @simple_tables = SimpleTable.where(:category_id => "famous_place").order('id DESC')
           @bank_ads = Advertisement.where(:category => "famous_place")
   
     respond_to do |format|
@@ -172,7 +172,7 @@ class SimpleTablesController < ApplicationController
   end
 
   def my_gas_station
-    @simple_tables = SimpleTable.where(:category_id => "gas_station")
+    @simple_tables = SimpleTable.where(:category_id => "gas_station").order('id DESC')
         @bank_ads = Advertisement.where(:category => "gas_station")
   
     respond_to do |format|
@@ -190,7 +190,7 @@ class SimpleTablesController < ApplicationController
   end
 
   def my_jewellery
-    @simple_tables = SimpleTable.where(:category_id => "jewellery")
+    @simple_tables = SimpleTable.where(:category_id => "jewellery").order('id DESC')
       @bank_ads = Advertisement.where(:category => "jewellery")
   
     respond_to do |format|
@@ -208,7 +208,7 @@ class SimpleTablesController < ApplicationController
   end
 
   def my_emergency_contact
-    @simple_tables = SimpleTable.where(:category_id => "emergency_contact")
+    @simple_tables = SimpleTable.where(:category_id => "emergency_contact").order('id DESC')
           @bank_ads = Advertisement.where(:category => "emergency_contact")
   
     respond_to do |format|
@@ -226,7 +226,7 @@ class SimpleTablesController < ApplicationController
   end
 
   def my_farmer
-    @simple_tables = SimpleTable.where(:category_id => "farmer")
+    @simple_tables = SimpleTable.where(:category_id => "farmer").order('id DESC')
               @bank_ads = Advertisement.where(:category => "farmer")
   
     respond_to do |format|
@@ -244,7 +244,7 @@ class SimpleTablesController < ApplicationController
   end
 
   def my_electronic
-    @simple_tables = SimpleTable.where(:category_id => "electronic")
+    @simple_tables = SimpleTable.where(:category_id => "electronic").order('id DESC')
                   @bank_ads = Advertisement.where(:category => "electronic")
   
     respond_to do |format|
@@ -262,7 +262,7 @@ class SimpleTablesController < ApplicationController
   end
 
   def my_tea_shop
-    @simple_tables = SimpleTable.where(:category_id => "tea_shop")
+    @simple_tables = SimpleTable.where(:category_id => "tea_shop").order('id DESC')
     @bank_ads = Advertisement.where(:category => "tea_shop")
   
     respond_to do |format|
@@ -280,7 +280,7 @@ class SimpleTablesController < ApplicationController
   end
 
   def my_cycle
-    @simple_tables = SimpleTable.where(:category_id => "cycle")
+    @simple_tables = SimpleTable.where(:category_id => "cycle").order('id DESC')
         @bank_ads = Advertisement.where(:category => "cycle")
   
     respond_to do |format|
@@ -298,7 +298,7 @@ class SimpleTablesController < ApplicationController
   end
 
   def my_restaurant
-    @simple_tables = SimpleTable.where(:category_id => "restaurant")
+    @simple_tables = SimpleTable.where(:category_id => "restaurant").order('id DESC')
    @bank_ads = Advertisement.where(:category => "restaurant")
   
     respond_to do |format|

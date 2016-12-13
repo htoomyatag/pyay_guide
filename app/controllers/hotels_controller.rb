@@ -7,7 +7,7 @@ class HotelsController < ApplicationController
 
 
   def my_hotel
-    @hotels = Hotel.all
+    @hotels = Hotel.all.order('id DESC')
     @bank_ads = Advertisement.where(:category => "hotel")
   
     respond_to do |format|
