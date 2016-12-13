@@ -19,6 +19,13 @@ class Bus < ActiveRecord::Base
       validates_attachment_content_type :avatar5, content_type: /\Aimage\/.*\z/
 
 
+
+      before_save :validate_desc
+
+      def validate_desc
+         self.description.to_s.gsub('rn','').gsub('tt-t','') unless self.description.nil?
+      end
+      
       def avatar_url1
             avatar1.url
       end
