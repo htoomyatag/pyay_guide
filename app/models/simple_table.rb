@@ -33,7 +33,7 @@ class SimpleTable < ActiveRecord::Base
       before_save :validate_desc
 
       def validate_desc
-         self.description.to_s.gsub('rn','').gsub('tt-t','') unless self.description.nil?
+         self.description.to_s.gsub('rn','').gsub('tt-t','').gsub('t-t','') unless self.description.nil?
       end
 
 

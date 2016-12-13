@@ -165,7 +165,7 @@ class SimpleTablesController < ApplicationController
           a = '"['
           b = ']"'
           my_third_json = my_seconday_json.gsub(a , "[")
-          my_fourth_json = my_third_json.gsub(b , "]").gsub('rn','').gsub('tt-t','')
+          my_fourth_json = my_third_json.gsub(b , "]").gsub('rn','').gsub('tt-t','').gsub('t-t','')
           format.json {render json: my_primary_json}
           format.text {render text: my_fourth_json}
     end
