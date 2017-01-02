@@ -15,7 +15,7 @@ class RestaurantsController < ApplicationController
 
     respond_to do |format|
           my_primary_json = {  :Rating => @ratings.to_json( :only => [:username, :rate_number, :rate_name, :rate_category]),:Restaurant => @restaurants.to_json( :only => [:region, :township, :name, :address, :phone, :website, :email, :category], :methods => [:avatar_url])   }
-          my_seconday_json = my_primary_json.to_json.gsub('\\', '').gsub("u0026","&")
+          my_seconday_json = my_primary_json.to_json.gsub('\\', '').gsub("u0026","&").gsub("rnrn","")
           a = '"['
           b = ']"'
           my_third_json = my_seconday_json.gsub(a , "[")

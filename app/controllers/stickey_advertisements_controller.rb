@@ -12,7 +12,7 @@ class StickeyAdvertisementsController < ApplicationController
           my_primary_json = { 
               :Advertisement => @bank_ads.to_json(:methods => [:avatar_url1])
                }
-          my_seconday_json = my_primary_json.to_json.gsub('\\', '').gsub("u0026","&")
+          my_seconday_json = my_primary_json.to_json.gsub('\\', '').gsub("u0026","&").gsub("rnrn","")
           a = '"['
           b = ']"'
           my_third_json = my_seconday_json.gsub(a , "[")

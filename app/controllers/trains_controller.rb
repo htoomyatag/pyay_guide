@@ -26,7 +26,7 @@ class TrainsController < ApplicationController
             :City => @cites.to_json( :only => [:from, :to]),
             :Rating => @ratings.to_json( :only => [:username, :rate_number, :rate_name, :rate_category]),   
             :Train => @trains.to_json( :only => [:arrival_time,:departure_time,:remark,:name, :address,:phone,:website, :email, :from, :to], :methods => [:avatar_url])   }
-          my_seconday_json = my_primary_json.to_json.gsub('\\', '').gsub("u0026","&").html_safe 
+          my_seconday_json = my_primary_json.to_json.gsub('\\', '').gsub("u0026","&").gsub("rnrn","").html_safe 
           a = '"['
           b = ']"'
           my_third_json = my_seconday_json.gsub(a , "[")
